@@ -11,6 +11,6 @@ module.exports = {
   ],
   exclude: [/\/core-js\//],
   plugins: [
-    '@babel/plugin-transform-runtime'
+    '@babel/plugin-transform-runtime',
   ],
 };
