@@ -1,7 +1,7 @@
 {
   "name": "webpack-node-modules-splitting",
   "scripts": {
-    "start:dev-server": "yarn pnpify webpack-dev-server",
+    "start:dev": "yarn pnpify webpack-dev-server -w",
     "commit": "git-cz",
     "start": "yarn pnpify webpack --mode=development -w"
   },
