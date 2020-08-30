@@ -7,6 +7,11 @@ const CompressionWebpackPlugin = require('compression-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const crypto = require('crypto');
+
+const isModuleCSS = (module) => {
+  return module.type === 'css/mini-extract';
+};
 
 module.exports = (env, argv) => {
   const isProductEnv = argv.mode === 'production';
@@ -101,7 +106,56 @@ module.exports = (env, argv) => {
       ],
       splitChunks: {
         chunks: 'all',
-        name: 'vendors',
+        cacheGroups: {
+          default: false,
+          vendors: false,
+          // vendors was renamed to defaultVendors
+          defaultVendors: false,
+          framework: {
+            chunks: 'all',
+            name: 'framework',
+            // eslint-disable-next-line max-len
+            test: /(?<!node_modules.*)[\\/]node_modules[\\/](react|react-dom|react-router-dom)[\\/]/,
+            priority: 40,
+            enforce: true,
+          },
+          lib: {
+            test(module) {
+              return (
+                module.size() > 80000 &&
+                /node_modules[/\\]/.test(module.identifier())
+              );
+            },
+            name(module) {
+              const hash = crypto.createHash('sha1');
+              if (isModuleCSS(module)) {
+                module.updateHash(hash);
+
+                return hash.digest('hex').substring(0, 8);
+              } else {
+                if (!module.libIdent) {
+                  throw new Error(
+                    `Encountered unknown module type: ${module.type}. Please open an issue.`,
+                  );
+                }
+              }
+
+              hash.update(module.libIdent({ context: __dirname }));
+
+              return hash.digest('hex').substring(0, 8);
+            },
+            priority: 30,
+            minChunks: 1,
+            reuseExistingChunk: true,
+          },
+          commons: {
+            name: 'commons',
+            minChunks: 1, // entry points length
+            priority: 20,
+          },
+        },
+        maxInitialRequests: 25,
+        minSize: 20000,
       },
     },
   };
