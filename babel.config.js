@@ -12,5 +12,6 @@ module.exports = {
   exclude: [/\/core-js\//],
   plugins: [
     '@babel/plugin-transform-runtime',
+    // use https://github.com/lodash/babel-plugin-lodash
   ],
 };

@@ -106,7 +106,6 @@ module.exports = (env, argv) => {
     },
   };
 
-
   if (argv.watch) {
     config.plugins.push(
       new BundleAnalyzerPlugin({
