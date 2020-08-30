@@ -25,11 +25,7 @@ module.exports = (env, argv) => {
         {
           test: /\.(ts|tsx|js)?$/,
           exclude: /(node_modules|__test__)/,
-          use: [
-            {
-              loader: 'babel-loader',
-            },
-          ],
+          use: 'babel-loader',
         },
         {
           test: /\.css$/,
@@ -64,9 +60,6 @@ module.exports = (env, argv) => {
         filename: '../index.pug',
       }),
       new HtmlWebpackPugPlugin(),
-      new webpack.DefinePlugin({
-        COMMIT_SHA: JSON.stringify(COMMIT_SHA),
-      }),
     ],
     optimization: {
       minimize: isProductEnv,
