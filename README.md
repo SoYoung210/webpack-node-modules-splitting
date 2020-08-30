@@ -2,6 +2,16 @@
 
 Example of webpack configuration that divides a node module into multiple modules according to rules.
 
+## 🚀 How To Run?
+
+```bash
+# with Yarn 2+
+$ yarn
+$ yarn start:dev
+```
+
+Go To `http://localhost:9000`
+
 ## 👩🏻‍💻 About This Project
 
 This project's dependency is managed by yarn2. If you don't have yarn 2 configured on your computer, please refer to [this document](https://yarnpkg.com/getting-started/install) to configure it.
