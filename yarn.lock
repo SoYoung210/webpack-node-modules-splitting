@@ -1493,6 +1493,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/lodash@npm:^4.14.161":
+  version: 4.14.161
+  resolution: "@types/lodash@npm:4.14.161"
+  checksum: c3657517dab1a23059d86ae379c4e7538212f05ba9c3e108ab694167f086118a5b44ed04bcb6e5cd0a89778c29909668302a755df576e3597df16fda8b603443
+  languageName: node
+  linkType: hard
+
 "@types/minimatch@npm:*":
   version: 3.0.3
   resolution: "@types/minimatch@npm:3.0.3"
@@ -6625,6 +6632,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"lottie-web@npm:^5.7.3":
+  version: 5.7.3
+  resolution: "lottie-web@npm:5.7.3"
+  checksum: 45d3bd21cc292f901cecfd6cb1906d2d493e2a30a0324d835ba377b4c81c736961bd3a3cd38ab48760fb76ed6c058d285dfe4700520dedeedd2744bdf59d42a9
+  languageName: node
+  linkType: hard
+
 "lottie@npm:^0.0.1":
   version: 0.0.1
   resolution: "lottie@npm:0.0.1"
@@ -10619,6 +10633,7 @@ typescript@^4.0.2:
     "@babel/preset-react": ^7.10.4
     "@babel/preset-typescript": ^7.10.4
     "@berry/pnpify": ^0.1.0
+    "@types/lodash": ^4.14.161
     "@types/react": ^16.9.48
     "@types/react-dom": ^16.9.8
     "@typescript-eslint/eslint-plugin": ^3.10.1
@@ -10636,6 +10651,7 @@ typescript@^4.0.2:
     html-webpack-plugin: ^4.3.0
     lodash: ^4.17.20
     lottie: ^0.0.1
+    lottie-web: ^5.7.3
     mini-css-extract-plugin: ^0.11.0
     mkdirp: ^1.0.4
     optimize-css-assets-webpack-plugin: ^5.0.3

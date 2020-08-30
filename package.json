@@ -9,6 +9,7 @@
     "@yarnpkg/pnpify": "^2.2.0",
     "lodash": "^4.17.20",
     "lottie": "^0.0.1",
+    "lottie-web": "^5.7.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0"
@@ -20,6 +21,7 @@
     "@babel/preset-react": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
     "@berry/pnpify": "^0.1.0",
+    "@types/lodash": "^4.14.161",
     "@types/react": "^16.9.48",
     "@types/react-dom": "^16.9.8",
     "@typescript-eslint/eslint-plugin": "^3.10.1",

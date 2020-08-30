@@ -43,6 +43,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-react", "virtual:6a7f4d97c71c8fb8cc139652c1c07c68c9af73667c9018ae19419834a39da3406ac0e7e432a9175e26aac5ef9b1ab590bc1432c11f32ec88164026b200a419a8#npm:7.10.4"],
             ["@babel/preset-typescript", "virtual:6a7f4d97c71c8fb8cc139652c1c07c68c9af73667c9018ae19419834a39da3406ac0e7e432a9175e26aac5ef9b1ab590bc1432c11f32ec88164026b200a419a8#npm:7.10.4"],
             ["@berry/pnpify", "virtual:6a7f4d97c71c8fb8cc139652c1c07c68c9af73667c9018ae19419834a39da3406ac0e7e432a9175e26aac5ef9b1ab590bc1432c11f32ec88164026b200a419a8#npm:0.1.0"],
+            ["@types/lodash", "npm:4.14.161"],
             ["@types/react", "npm:16.9.48"],
             ["@types/react-dom", "npm:16.9.8"],
             ["@typescript-eslint/eslint-plugin", "virtual:6a7f4d97c71c8fb8cc139652c1c07c68c9af73667c9018ae19419834a39da3406ac0e7e432a9175e26aac5ef9b1ab590bc1432c11f32ec88164026b200a419a8#npm:3.10.1"],
@@ -60,6 +61,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["html-webpack-plugin", "virtual:6a7f4d97c71c8fb8cc139652c1c07c68c9af73667c9018ae19419834a39da3406ac0e7e432a9175e26aac5ef9b1ab590bc1432c11f32ec88164026b200a419a8#npm:4.3.0"],
             ["lodash", "npm:4.17.20"],
             ["lottie", "npm:0.0.1"],
+            ["lottie-web", "npm:5.7.3"],
             ["mini-css-extract-plugin", "virtual:6a7f4d97c71c8fb8cc139652c1c07c68c9af73667c9018ae19419834a39da3406ac0e7e432a9175e26aac5ef9b1ab590bc1432c11f32ec88164026b200a419a8#npm:0.11.0"],
             ["mkdirp", "npm:1.0.4"],
             ["optimize-css-assets-webpack-plugin", "virtual:6a7f4d97c71c8fb8cc139652c1c07c68c9af73667c9018ae19419834a39da3406ac0e7e432a9175e26aac5ef9b1ab590bc1432c11f32ec88164026b200a419a8#npm:5.0.3"],
@@ -1994,6 +1996,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@types/keyv", "npm:3.1.1"],
             ["@types/node", "npm:14.6.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/lodash", [
+        ["npm:4.14.161", {
+          "packageLocation": "./.yarn/cache/@types-lodash-npm-4.14.161-3f926592cc-c3657517da.zip/node_modules/@types/lodash/",
+          "packageDependencies": [
+            ["@types/lodash", "npm:4.14.161"]
           ],
           "linkType": "HARD",
         }]
@@ -7793,6 +7804,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["lottie-web", [
+        ["npm:5.7.3", {
+          "packageLocation": "./.yarn/cache/lottie-web-npm-5.7.3-6621bfff6b-45d3bd21cc.zip/node_modules/lottie-web/",
+          "packageDependencies": [
+            ["lottie-web", "npm:5.7.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["lower-case", [
         ["npm:2.0.1", {
           "packageLocation": "./.yarn/cache/lower-case-npm-2.0.1-f34f50c78b-52a55327ea.zip/node_modules/lower-case/",
@@ -12304,6 +12324,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-react", "virtual:6a7f4d97c71c8fb8cc139652c1c07c68c9af73667c9018ae19419834a39da3406ac0e7e432a9175e26aac5ef9b1ab590bc1432c11f32ec88164026b200a419a8#npm:7.10.4"],
             ["@babel/preset-typescript", "virtual:6a7f4d97c71c8fb8cc139652c1c07c68c9af73667c9018ae19419834a39da3406ac0e7e432a9175e26aac5ef9b1ab590bc1432c11f32ec88164026b200a419a8#npm:7.10.4"],
             ["@berry/pnpify", "virtual:6a7f4d97c71c8fb8cc139652c1c07c68c9af73667c9018ae19419834a39da3406ac0e7e432a9175e26aac5ef9b1ab590bc1432c11f32ec88164026b200a419a8#npm:0.1.0"],
+            ["@types/lodash", "npm:4.14.161"],
             ["@types/react", "npm:16.9.48"],
             ["@types/react-dom", "npm:16.9.8"],
             ["@typescript-eslint/eslint-plugin", "virtual:6a7f4d97c71c8fb8cc139652c1c07c68c9af73667c9018ae19419834a39da3406ac0e7e432a9175e26aac5ef9b1ab590bc1432c11f32ec88164026b200a419a8#npm:3.10.1"],
@@ -12321,6 +12342,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["html-webpack-plugin", "virtual:6a7f4d97c71c8fb8cc139652c1c07c68c9af73667c9018ae19419834a39da3406ac0e7e432a9175e26aac5ef9b1ab590bc1432c11f32ec88164026b200a419a8#npm:4.3.0"],
             ["lodash", "npm:4.17.20"],
             ["lottie", "npm:0.0.1"],
+            ["lottie-web", "npm:5.7.3"],
             ["mini-css-extract-plugin", "virtual:6a7f4d97c71c8fb8cc139652c1c07c68c9af73667c9018ae19419834a39da3406ac0e7e432a9175e26aac5ef9b1ab590bc1432c11f32ec88164026b200a419a8#npm:0.11.0"],
             ["mkdirp", "npm:1.0.4"],
             ["optimize-css-assets-webpack-plugin", "virtual:6a7f4d97c71c8fb8cc139652c1c07c68c9af73667c9018ae19419834a39da3406ac0e7e432a9175e26aac5ef9b1ab590bc1432c11f32ec88164026b200a419a8#npm:5.0.3"],
