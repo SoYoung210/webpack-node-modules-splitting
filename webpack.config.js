@@ -7,7 +7,6 @@ const CompressionWebpackPlugin = require('compression-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 
 module.exports = (env, argv) => {
   const isProductEnv = argv.mode === 'production';
@@ -19,6 +18,11 @@ module.exports = (env, argv) => {
         '@': pathJoin('src'),
       },
       extensions: ['css', '.ts', '.tsx', '.js', '.json'],
+    },
+    devServer: {
+      contentBase: pathJoin('static'),
+      compress: true,
+      port: 9000,
     },
     module: {
       rules: [
@@ -37,11 +41,10 @@ module.exports = (env, argv) => {
       ],
     },
     output: {
-      path: pathJoin('../static/resources'),
+      path: pathJoin('./static/resources'),
       filename: '[name].bundle.js',
       chunkFilename: '[name].bundle.js',
-      path: pathJoin('../static/resources'),
-      publicPath: '/',
+      path: pathJoin('./static/resources'),
     },
     plugins: [
       new CompressionWebpackPlugin({
@@ -56,10 +59,9 @@ module.exports = (env, argv) => {
         chunkFilename: `[name].bundle.css`,
       }),
       new HtmlWebpackPlugin({
-        template: pathJoin(`./public/index.pug`),
-        filename: '../index.pug',
+        template: pathJoin(`./public/index.html`),
+        filename: './index.html',
       }),
-      new HtmlWebpackPugPlugin(),
     ],
     optimization: {
       minimize: isProductEnv,
