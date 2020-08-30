@@ -1,7 +1,7 @@
 {
   "name": "webpack-node-modules-splitting",
   "scripts": {
-    "start:dev-server": "webpack-dev-server",
+    "start:dev-server": "yarn pnpify webpack-dev-server",
     "commit": "git-cz",
     "start": "yarn pnpify webpack --mode=development -w"
   },
@@ -32,7 +32,6 @@
     "eslint-plugin-simple-import-sort": "^5.0.3",
     "git-cz": "^4.7.1",
     "html-webpack-plugin": "^4.3.0",
-    "html-webpack-pug-plugin": "^2.0.0",
     "mini-css-extract-plugin": "^0.11.0",
     "mkdirp": "^1.0.4",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
